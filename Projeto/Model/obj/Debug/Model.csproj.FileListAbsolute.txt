@@ -1,0 +1,11 @@
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Model\bin\Debug\Model.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Model\bin\Debug\Model.pdb
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Model\obj\Debug\Model.dll
+C:\Users\26007051\documents\visual studio 2012\Projects\AulaApp\Model\obj\Debug\Model.pdb
+D:\Users\rafae\Documents\construcao-projetos\Model\bin\Debug\Model.dll
+D:\Users\rafae\Documents\construcao-projetos\Model\bin\Debug\Model.pdb
+D:\Users\rafae\Documents\construcao-projetos\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Users\rafae\Documents\construcao-projetos\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Users\rafae\Documents\construcao-projetos\Model\obj\Debug\Model.dll
+D:\Users\rafae\Documents\construcao-projetos\Model\obj\Debug\Model.pdb
