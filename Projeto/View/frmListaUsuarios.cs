@@ -14,7 +14,7 @@ namespace View
 {
     public partial class frmListaUsuarios : Form
     {
-        private Pessoa p;
+        private Usuario u;
 
         public frmListaUsuarios()
         {
@@ -31,5 +31,10 @@ namespace View
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmFavoritarHistoria form = new frmFavoritarHistoria();
+            form.ShowDialog();
+        }
     }
 }

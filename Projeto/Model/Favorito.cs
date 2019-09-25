@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Favorito
+    public class Favorito
     {
         #region Atributos
         public int id { get; set; }

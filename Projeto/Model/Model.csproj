@@ -43,7 +43,6 @@
     <Compile Include="Comentario.cs" />
     <Compile Include="Favorito.cs" />
     <Compile Include="Historia.cs" />
-    <Compile Include="Pessoa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>

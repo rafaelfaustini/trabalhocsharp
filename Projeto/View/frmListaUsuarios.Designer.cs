@@ -36,11 +36,11 @@
             this.gcolUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gcolSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.documento = new System.Drawing.Printing.PrintDocument();
             this.janelaImpressao = new System.Windows.Forms.PrintDialog();
             this.btnEditar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.gpbPessoas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
@@ -117,15 +117,6 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(18, 410);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(75, 23);
-            this.btnImprimir.TabIndex = 8;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
-            // 
             // documento
             // 
             this.documento.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.documento_PrintPage);
@@ -136,7 +127,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(108, 410);
+            this.btnEditar.Location = new System.Drawing.Point(18, 410);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 9;
@@ -145,27 +136,37 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(189, 410);
+            this.button1.Location = new System.Drawing.Point(99, 410);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
             this.button1.Text = "Deletar";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(180, 410);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Adicionar Favorito";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmListaUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 440);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.gpbPessoas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmListaUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pessoas Cadastradas";
+            this.Text = "Usuarios Cadastradas";
             this.gpbPessoas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
@@ -177,7 +178,6 @@
         private System.Windows.Forms.GroupBox gpbPessoas;
         private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Drawing.Printing.PrintDocument documento;
         private System.Windows.Forms.PrintDialog janelaImpressao;
         private System.Windows.Forms.DataGridViewTextBoxColumn gcolID;
@@ -187,5 +187,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gcolSenha;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

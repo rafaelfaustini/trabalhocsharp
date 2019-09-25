@@ -20,6 +20,9 @@ namespace Model
         public String DisplayName { get; set; }
 
         public Boolean ativado { get; set; }
+
+        public List<Favorito> Favoritos { get; set; }
+
         #endregion
     }
 }

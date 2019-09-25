@@ -14,3 +14,12 @@ D:\Users\rafae\Documents\construcao-projetos\Dao\obj\Debug\Dao.csproj.CoreCompil
 D:\Users\rafae\Documents\construcao-projetos\Dao\obj\Debug\Dao.csproj.CopyComplete
 D:\Users\rafae\Documents\construcao-projetos\Dao\obj\Debug\Dao.dll
 D:\Users\rafae\Documents\construcao-projetos\Dao\obj\Debug\Dao.pdb
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\bin\Debug\Dao.dll
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\bin\Debug\Dao.pdb
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\bin\Debug\Model.dll
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\bin\Debug\Model.pdb
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\obj\Debug\Dao.csprojAssemblyReference.cache
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\obj\Debug\Dao.csproj.CoreCompileInputs.cache
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\obj\Debug\Dao.csproj.CopyComplete
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\obj\Debug\Dao.dll
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Dao\obj\Debug\Dao.pdb

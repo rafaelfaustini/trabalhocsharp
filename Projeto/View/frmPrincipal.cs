@@ -14,7 +14,12 @@ namespace View
     public partial class frmPrincipal : Form
     {
 
-        private Dictionary<Int64, Pessoa> mapaPessoas;
+        private Dictionary<Int64, Usuario> mapaUsuarios;
+        private Dictionary<Int64, Usuario> mapaHistorias;
+        private Dictionary<Int64, Usuario> mapaCapitulos;
+
+
+
 
         public frmPrincipal()
         {
@@ -37,7 +42,7 @@ namespace View
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            
+            AbrirForm(new frmCadComentario());
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -56,7 +61,7 @@ namespace View
 
                 Usuario user = (Usuario)form.Tag;
 
-                sUser.Text = " | Usuário logado: " + user.DisplayName;
+                sUser.Text = " | Usuário: " + user.DisplayName;
 
                 tmHora.Enabled = true;
 
@@ -68,34 +73,84 @@ namespace View
             itsLabelHora.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void AbrirForm(Form frm)
+        {
+            frm.Show();
+        }
+    
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormCadPessoa();
+            AbrirForm(new frmCadUsuario());
         }
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListaUsuarios form = new frmListaUsuarios();
-
-            form.ShowDialog();
+            AbrirForm(new frmCadUsuario());
         }
-
-        private void AbrirFormCadUsuario()
-        {
-            frmCadUsuario form = new frmCadUsuario();
-
-            form.ShowDialog();
-        }
-
         private void itbCadPessoa_Click(object sender, EventArgs e)
         {
-            AbrirFormCadPessoa();
+            AbrirForm(new frmCadUsuario());
         }
 
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AbrirForm(new frmCadUsuario());
+        }
 
+        private void itbCadHistoria_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadHistoria());
+        }
+
+        private void itbCadCapitulo_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadCapitulo());
+        }
+
+        private void itbCadFavorito_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadUsuario());
+        }
+
+        private void listarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AbrirForm(new frmListaUsuarios());
+        }
+
+        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmListaHistorias());
+        }
+
+        private void listarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmListaCapitulos());
+        }
+
+        private void listarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmListaComentarios());
+        }
+
+        private void adicionarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadHistoria());
+        }
+
+        private void adicionarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadCapitulo());
+        }
+
+        private void aDicionarToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            AbrirForm(new frmCadComentario());
+        }
+
+        private void adicionarToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

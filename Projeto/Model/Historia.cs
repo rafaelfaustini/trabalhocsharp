@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     #region Atributos
-    class Historia
+    public class Historia
     {
         public int id { get; set; }
 
@@ -20,6 +20,8 @@ namespace Model
         public Boolean Titulo { get; set; }
 
         public String Sinopse { get; set; }
+
+        public List<Capitulo> Capitulos { get; set; }
     }
     #endregion
 }

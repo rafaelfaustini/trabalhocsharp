@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Comentario
+    public class Comentario
     {
         #region Atributos
         public int id { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     #region Atributos
-    class Capitulo
+    public class Capitulo
     {
         public int id { get; set; }
 
@@ -20,6 +20,8 @@ namespace Model
         public String Texto { get; set; }
 
         public String Titulo { get; set; }
+
+        public List<Comentario> Comentarios { get; set; }
     }
     #endregion
 }

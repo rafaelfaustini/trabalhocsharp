@@ -44,11 +44,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCadCapitulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadCapitulo.Designer.cs">
+      <DependentUpon>frmCadCapitulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadComentario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadComentario.Designer.cs">
+      <DependentUpon>frmCadComentario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadHistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadHistoria.Designer.cs">
+      <DependentUpon>frmCadHistoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadUsuario.Designer.cs">
       <DependentUpon>frmCadUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCapitulos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCapitulos.Designer.cs">
+      <DependentUpon>frmListaCapitulos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaComentarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaComentarios.Designer.cs">
+      <DependentUpon>frmListaComentarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaHistorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaHistorias.Designer.cs">
+      <DependentUpon>frmListaHistorias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaUsuarios.cs">
       <SubType>Form</SubType>
@@ -68,10 +104,34 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFavoritarHistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFavoritarHistoria.Designer.cs">
+      <DependentUpon>frmFavoritarHistoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadCapitulo.resx">
+      <DependentUpon>frmCadCapitulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadComentario.resx">
+      <DependentUpon>frmCadComentario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadHistoria.resx">
+      <DependentUpon>frmCadHistoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadUsuario.resx">
       <DependentUpon>frmCadUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCapitulos.resx">
+      <DependentUpon>frmListaCapitulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaComentarios.resx">
+      <DependentUpon>frmListaComentarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaHistorias.resx">
+      <DependentUpon>frmListaHistorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaUsuarios.resx">
       <DependentUpon>frmListaUsuarios.cs</DependentUpon>
@@ -81,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFavoritarHistoria.resx">
+      <DependentUpon>frmFavoritarHistoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
