@@ -17,7 +17,7 @@ namespace Model
 
         public DateTime Data { get; set; }
 
-        public Boolean Titulo { get; set; }
+        public String Titulo { get; set; }
 
         public String Sinopse { get; set; }
 

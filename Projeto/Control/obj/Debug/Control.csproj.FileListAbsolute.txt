@@ -29,3 +29,4 @@ D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csproj.CopyComplete
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.pdb
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
