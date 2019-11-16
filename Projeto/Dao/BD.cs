@@ -10,11 +10,12 @@ namespace Dao
 {
     public static class BD
     {
-        static String strConn = @"Data Source=" + System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\banco.sdf;Password=123;Persist Security Info=True";
+        static String strConn = @"Data Source=D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\banco.sdf;Password=;Persist Security Info=True";
         static SqlCeConnection conexao = null;
 
         public static void AbrirConexao()
         {
+            
             try
             {
                 if (conexao != null)

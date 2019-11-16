@@ -10,63 +10,36 @@ namespace Dao
 {
     public class FavoritoDAO
     {
-            public Favorito BuscarPorID(Int64 _idhistoria)
+
+        public Boolean InserirBD(Favorito _objeto)
+        {
+            try
             {
-                Favorito f = null;
-                Historia h = null;
-                Usuario u = null;
-                try
+                String SQL = "INSERT INTO Favorito (usuario_id, historia_id)"
+                                 + "VALUES (@usuario_id, @historia_id);";
+
+                List<SqlCeParameter> parametros = new List<SqlCeParameter>();
+
+                parametros.Add(new SqlCeParameter("@usuario_id", _objeto.Usuario.Id));
+                parametros.Add(new SqlCeParameter("@historia_id", _objeto.Historia.id));
+
+
+                Int32 idInserido = BD.ExecutarInsertComRetornoID(SQL, parametros);
+
+                if (idInserido != 0)
                 {
-
-                    String SQL = String.Format("SELECT id_usuario from favorito where id_historia = {0}", _idhistoria);
-
-                    SqlCeDataReader data = BD.ExecutarSelect(SQL);
-
-                    if (data.Read())
-                    {
-                        HistoriaDAO daoHistoria = new HistoriaDAO();
-                        h = daoHistoria.BuscarPorID(_idhistoria);
-
-                        UsuarioDAO daoUsuario = new UsuarioDAO();
-                        u = daoUsuario.BuscarPorID(data.GetInt32(0));
-
-                        f = new Favorito();
-                        f.Historia = h;
-                        f.Usuario = u;
-                    }
-
-                    data.Close();
-                    BD.FecharConexao();
+                    return true;
                 }
-                catch (Exception ex)
+                else
                 {
-                    throw new Exception(ex.Message);
+                    return false;
                 }
-
-                return f;
             }
-
-            public Boolean InserirBD(Favorito _objeto)
+            catch (Exception ex)
             {
-                bool resultado = false;
-                try
-                {
-                    String SQL = String.Format("INSERT INTO Favorito (descricao) VALUES ('{0}')", _objeto.Logradouro);
-
-                    int linhaAfetadas = BD.ExecutarIDU(SQL);
-
-                    if (linhaAfetadas > 0)
-                    {
-                        return true;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-
-                return resultado;
+                throw new Exception(ex.Message);
             }
+        }
 
             public Boolean DeletarBD(Int64 _id)
             {

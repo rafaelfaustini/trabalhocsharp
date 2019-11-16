@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using Control;
 
 namespace View
 {
@@ -65,6 +66,8 @@ namespace View
 
                 tmHora.Enabled = true;
 
+                CarregarListaUsuarios();
+
             }
         }
 
@@ -87,9 +90,35 @@ namespace View
         {
             AbrirForm(new frmCadUsuario());
         }
-        private void itbCadPessoa_Click(object sender, EventArgs e)
+        private void itbCadUsuario_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmCadUsuario());
+            frmCadUsuario form = new frmCadUsuario();
+
+            try
+            {
+            Int64 ultimaChave = mapaUsuarios.Keys.Max() + 1;
+
+            form.Tag = ultimaChave;
+
+            }catch{
+
+            }
+
+            AbrirForm(form);
+        }
+        private void CarregarListaUsuarios()
+        {
+            try
+            {
+                UsuarioController control = new UsuarioController();
+
+                mapaUsuarios = control.ListarUsuarios();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO AO CARREGAR LISTA DE UsuarioS: " + ex.Message);
+            }
         }
 
 
@@ -115,7 +144,18 @@ namespace View
 
         private void listarToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            AbrirForm(new frmListaUsuarios());
+            frmListaUsuarios form = new frmListaUsuarios();
+
+            try
+            {
+                form.Tag = mapaUsuarios;
+
+            }
+            catch
+            {
+
+            }
+            AbrirForm(form);
         }
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -151,6 +191,11 @@ namespace View
         private void adicionarToolStripMenuItem4_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void itmArquivo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

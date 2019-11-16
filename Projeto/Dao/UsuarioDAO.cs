@@ -88,45 +88,20 @@ namespace Dao
             return u;
         }
 
-        public Boolean InserirBD(Usuario _objeto)
-        {
-            bool resultado = false;
-            try
-            {
-                String SQL = String.Format("INSERT INTO Usuario (nome, email, telefone, sexo, estado_civil, animal, filhos) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}')",
-                    _objeto.Nome,
-                    _objeto.Email,
-                    _objeto.Telefone,
-                    _objeto.Sexo,
-                    _objeto.EstadoCivil,
-                    _objeto.Animais,
-                    _objeto.Filhos);
-
-                int linhaAfetadas = BD.ExecutarIDU(SQL);
-
-                if (linhaAfetadas > 0)
-                {
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-            return resultado;
-        }
 
         public Boolean AlterarBD(Usuario _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE Usuario SET nome = '{0}', email = '{1}', telefone = '{2}' WHERE id = {3};",
-                    _objeto.Nome,
+                String SQL = String.Format("UPDATE Usuario SET username = '{0}', email = '{1}', senha = '{2}', displayname = '{3}' WHERE id = {4};",
+                    _objeto.Username,
                     _objeto.Email,
-                    _objeto.Telefone,
+                    _objeto.Senha,
+                    _objeto.DisplayName,
                     _objeto.Id);
+
+
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 
@@ -165,36 +140,24 @@ namespace Dao
             return resultado;
         }
 
-        //INSERT COM PARAMETROS NO COMANDO E RETORNO DO ID GERADO AUTOMATICAMENTE
-        public Boolean InserirBDParametros(Usuario _objeto)
+        public Boolean InserirBD(Usuario _objeto)
         {
             try
             {
-                //String SQL = "INSERT into tabela(nome)values(@nome); SELECT SCOPE_IDENTITY();");
-                String SQL = "INSERT INTO Usuario (nome, email, telefone, sexo, estado_civil, animal, filhos)"
-                                 + "VALUES (@nome, @email, @telefone, @sexo, @estado_civil, @animal, @filhos);";
+                String SQL = "INSERT INTO Usuario (username, email, senha, displayname)"
+                                 + "VALUES (@username, @email, @senha, @displayname);";
 
                 List<SqlCeParameter> parametros = new List<SqlCeParameter>();
 
-                parametros.Add(new SqlCeParameter("@nome", _objeto.Nome));
+                parametros.Add(new SqlCeParameter("@username", _objeto.Username));
                 parametros.Add(new SqlCeParameter("@email", _objeto.Email));
-                parametros.Add(new SqlCeParameter("@telefone", _objeto.Telefone));
-                parametros.Add(new SqlCeParameter("@sexo", _objeto.Sexo));
-                parametros.Add(new SqlCeParameter("@estado_civil", _objeto.EstadoCivil));
-                parametros.Add(new SqlCeParameter("@animal", _objeto.Animais));
-                parametros.Add(new SqlCeParameter("@filhos", _objeto.Filhos));
+                parametros.Add(new SqlCeParameter("@senha", _objeto.Senha));
+                parametros.Add(new SqlCeParameter("@displayname", _objeto.DisplayName));
 
                 Int32 idInserido = BD.ExecutarInsertComRetornoID(SQL, parametros);
 
                 if (idInserido != 0)
                 {
-
-                    FavoritoDAO daoFavorito = new FavoritoDAO();
-
-                    foreach (Favorito end in _objeto.Favoritos)
-                    {
-                        daoFavorito.InserirBD(end);
-                    }
 
                     return true;
                 }

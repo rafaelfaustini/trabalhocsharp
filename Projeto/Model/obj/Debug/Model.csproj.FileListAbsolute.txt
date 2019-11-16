@@ -13,4 +13,5 @@ D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\bin\Debug\Model.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\bin\Debug\Model.pdb
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\obj\Debug\Model.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\obj\Debug\Model.pdb
-D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache

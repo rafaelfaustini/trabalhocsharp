@@ -56,4 +56,6 @@ D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\obj\Debug\View.frmLi
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\obj\Debug\View.frmListaComentarios.resources
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\obj\Debug\View.frmListaHistorias.resources
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\obj\Debug\View.frmFavoritarHistoria.resources
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\bin\Debug\Dao.dll
+D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\bin\Debug\Dao.pdb
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\View\obj\Debug\View.csprojResolveAssemblyReference.cache

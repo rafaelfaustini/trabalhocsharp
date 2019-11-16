@@ -80,7 +80,7 @@ namespace Dao
 
                     CapituloDAO dao = new CapituloDAO();
 
-                    h.Capitulos = dao.BuscarCapitulosPorHistoria(historia.id);
+                    h.Capitulos = dao.BuscarCapitulosPorHistoria(h.id);
 
             }
             catch (Exception ex)
@@ -93,26 +93,45 @@ namespace Dao
 
         public Boolean InserirBD(Historia _objeto)
         {
-            bool resultado = false;
             try
             {
-                String SQL = String.Format("INSERT INTO Historia (autor, terminada, data, titulo, sinopse) VALUES ({0}, {1}, '{2}', '{3}', '{4}')", 
-                    _objeto.Autor, _objeto.Terminada, _objeto.Data, _objeto.Titulo, _objeto.Sinopse);
+                String SQL = "INSERT INTO historia (autor, terminada, data, titulo, sinopse)"
+                                 + "VALUES (@autor, @terminada, @data, @titulo, @sinopse);";
 
-                int linhaAfetadas = BD.ExecutarIDU(SQL);
+                List<SqlCeParameter> parametros = new List<SqlCeParameter>();
 
-                if (linhaAfetadas > 0)
+                parametros.Add(new SqlCeParameter("@autor", _objeto.Autor.Id));
+                parametros.Add(new SqlCeParameter("@terminada", _objeto.Terminada));
+                parametros.Add(new SqlCeParameter("@data", _objeto.Data));
+                parametros.Add(new SqlCeParameter("@titulo", _objeto.Titulo));
+                parametros.Add(new SqlCeParameter("@sinopse", _objeto.Sinopse));
+
+
+                Int32 idInserido = BD.ExecutarInsertComRetornoID(SQL, parametros);
+
+                if (idInserido != 0)
                 {
+
+                    CapituloDAO daoCapitulo = new CapituloDAO();
+
+                    foreach (Capitulo end in _objeto.Capitulos)
+                    {
+                        daoCapitulo.InserirBD(end);
+                    }
+
                     return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
-
-            return resultado;
         }
+
 
         public Boolean AlterarBD(Historia _objeto)
         {

@@ -36,5 +36,24 @@ namespace View
             frmFavoritarHistoria form = new frmFavoritarHistoria();
             form.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void CarregarMapaUsuarios()
+        {
+            Dictionary<Int64, Usuario> mapaUsuarios = (Dictionary<Int64, Usuario>)this.Tag;
+            foreach (Usuario o in mapaUsuarios.Values)
+            {
+                dgvDados.Rows.Add(o.Id, o.DisplayName, o.Email, o.Username, o.Senha);
+            }
+        }
+
+        private void frmListaUsuarios_Load_1(object sender, EventArgs e)
+        {
+            CarregarMapaUsuarios();
+
+        }
     }
 }

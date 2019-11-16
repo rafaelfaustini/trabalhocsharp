@@ -8,25 +8,9 @@ using Dao;
 
 namespace Control
 {
-    class UsuarioController
+    public class UsuarioController
     {
-        public Boolean SalvarUsuarioNoArquivo(Usuario _p)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-
-                dao.SalvarUsuarioNoArquivo(_p);
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public Dictionary<Int64, Usuario> ListarUsuariosDoArquivo()
+        public Dictionary<Int64, Usuario> ListarUsuarios()
         {
             try
             {
@@ -45,7 +29,6 @@ namespace Control
                 throw new Exception(ex.Message);
             }
         }
-
         public Boolean InserirBD(Usuario _objeto)
         {
             bool resultado = false;
@@ -53,13 +36,12 @@ namespace Control
             {
                 UsuarioDAO dao = new UsuarioDAO();
 
-                return dao.InserirBDParametros(_objeto);
+                return dao.InserirBD(_objeto);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-
     }
 }

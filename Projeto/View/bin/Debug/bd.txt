@@ -1,6 +1,0 @@
-1;Thiago Giannini Ramos;(21) 21121-1111;thiago.ramos@lasalle.org,br;2;Gastão Gonçalves, 70;0;2;masculino;casado;True;True;
-2;Thiago Ramos;(21) 21121-1111;thiago.ramos@lasalle.org,br;2;Gastão Gonçalves, 70;0;1;masculino;casado;True;True;
-3;Teste132;(21) 21212-1212;teste@gmail.com;3;Marques de Parana;0;2;masculino;casado;True;True;
-4;TesteChave;(21) 21212-1212;teste@gmail.com;1;Endereço;1;1;masculino;solteiro;True;False;
-5;Teste 654;(21) 21212-1212;teste@gmail.com;1;Endereço;1;1;masculino;solteiro;True;True;
-6;Teste 987;(22) 12121-2121;2121212;0;132132;1;1;masculino;solteiro;True;True;

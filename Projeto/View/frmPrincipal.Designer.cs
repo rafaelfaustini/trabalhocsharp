@@ -87,6 +87,7 @@
             this.itmArquivo.Size = new System.Drawing.Size(61, 20);
             this.itmArquivo.Text = "A&rquivo";
             this.itmArquivo.ToolTipText = "Item arquivo";
+            this.itmArquivo.Click += new System.EventHandler(this.itmArquivo_Click);
             // 
             // usuarioToolStripMenuItem
             // 
@@ -94,20 +95,20 @@
             this.adicionarToolStripMenuItem,
             this.listarToolStripMenuItem});
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
-            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
             // 
             // adicionarToolStripMenuItem
             // 
             this.adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.adicionarToolStripMenuItem.Text = "Adicionar";
             this.adicionarToolStripMenuItem.Click += new System.EventHandler(this.adicionarToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click_1);
             // 
@@ -117,20 +118,20 @@
             this.adicionarToolStripMenuItem1,
             this.listarToolStripMenuItem1});
             this.históriaToolStripMenuItem.Name = "históriaToolStripMenuItem";
-            this.históriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.históriaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.históriaToolStripMenuItem.Text = "História";
             // 
             // adicionarToolStripMenuItem1
             // 
             this.adicionarToolStripMenuItem1.Name = "adicionarToolStripMenuItem1";
-            this.adicionarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.adicionarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.adicionarToolStripMenuItem1.Text = "Adicionar";
             this.adicionarToolStripMenuItem1.Click += new System.EventHandler(this.adicionarToolStripMenuItem1_Click);
             // 
             // listarToolStripMenuItem1
             // 
             this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(125, 22);
             this.listarToolStripMenuItem1.Text = "Listar";
             this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
@@ -140,20 +141,20 @@
             this.adicionarToolStripMenuItem2,
             this.listarToolStripMenuItem2});
             this.capítuloToolStripMenuItem.Name = "capítuloToolStripMenuItem";
-            this.capítuloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.capítuloToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.capítuloToolStripMenuItem.Text = "Capítulo";
             // 
             // adicionarToolStripMenuItem2
             // 
             this.adicionarToolStripMenuItem2.Name = "adicionarToolStripMenuItem2";
-            this.adicionarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.adicionarToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.adicionarToolStripMenuItem2.Text = "Adicionar";
             this.adicionarToolStripMenuItem2.Click += new System.EventHandler(this.adicionarToolStripMenuItem2_Click);
             // 
             // listarToolStripMenuItem2
             // 
             this.listarToolStripMenuItem2.Name = "listarToolStripMenuItem2";
-            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.listarToolStripMenuItem2.Size = new System.Drawing.Size(125, 22);
             this.listarToolStripMenuItem2.Text = "Listar";
             this.listarToolStripMenuItem2.Click += new System.EventHandler(this.listarToolStripMenuItem2_Click);
             // 
@@ -163,20 +164,20 @@
             this.aDicionarToolStripMenuItem3,
             this.listarToolStripMenuItem3});
             this.comentárioToolStripMenuItem.Name = "comentárioToolStripMenuItem";
-            this.comentárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.comentárioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.comentárioToolStripMenuItem.Text = "Comentário";
             // 
             // aDicionarToolStripMenuItem3
             // 
             this.aDicionarToolStripMenuItem3.Name = "aDicionarToolStripMenuItem3";
-            this.aDicionarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.aDicionarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
             this.aDicionarToolStripMenuItem3.Text = "Adicionar";
             this.aDicionarToolStripMenuItem3.Click += new System.EventHandler(this.aDicionarToolStripMenuItem3_Click);
             // 
             // listarToolStripMenuItem3
             // 
             this.listarToolStripMenuItem3.Name = "listarToolStripMenuItem3";
-            this.listarToolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.listarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
             this.listarToolStripMenuItem3.Text = "Listar";
             this.listarToolStripMenuItem3.Click += new System.EventHandler(this.listarToolStripMenuItem3_Click);
             // 
@@ -186,13 +187,13 @@
             this.adicionarToolStripMenuItem4,
             this.listarToolStripMenuItem4});
             this.favoritoToolStripMenuItem.Name = "favoritoToolStripMenuItem";
-            this.favoritoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.favoritoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.favoritoToolStripMenuItem.Text = "Favorito";
             // 
             // adicionarToolStripMenuItem4
             // 
             this.adicionarToolStripMenuItem4.Name = "adicionarToolStripMenuItem4";
-            this.adicionarToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.adicionarToolStripMenuItem4.Size = new System.Drawing.Size(125, 22);
             this.adicionarToolStripMenuItem4.Text = "Adicionar";
             this.adicionarToolStripMenuItem4.Click += new System.EventHandler(this.adicionarToolStripMenuItem4_Click);
             // 
@@ -205,13 +206,13 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(134, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -236,7 +237,7 @@
             this.itbCadPessoa.Name = "itbCadPessoa";
             this.itbCadPessoa.Size = new System.Drawing.Size(96, 49);
             this.itbCadPessoa.Text = "Usuario";
-            this.itbCadPessoa.Click += new System.EventHandler(this.itbCadPessoa_Click);
+            this.itbCadPessoa.Click += new System.EventHandler(this.itbCadUsuario_Click);
             // 
             // itbCadHistoria
             // 

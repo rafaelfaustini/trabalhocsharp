@@ -24,9 +24,6 @@ D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\bin\Debug\Dao.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\bin\Debug\Model.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\bin\Debug\Dao.pdb
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\bin\Debug\Model.pdb
-D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csprojAssemblyReference.cache
-D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csproj.CoreCompileInputs.cache
-D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csproj.CopyComplete
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.dll
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.pdb
 D:\Users\rafae\Documents\GitHub\trabalhocsharp\Projeto\Control\obj\Debug\Control.csprojResolveAssemblyReference.cache
