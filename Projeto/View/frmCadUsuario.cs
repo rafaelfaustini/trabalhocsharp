@@ -32,26 +32,46 @@ namespace View
             try
             {
                 Usuario usuario = CarregarUsuarioDoForm();
+                UsuarioController control = new UsuarioController();
+                var usuariocast = this.Tag as Usuario;
+
+                if (usuariocast != null)
+                {
+                    u.Id = ((Usuario)this.Tag).Id;
+                    Boolean teste = control.AlterarBD(usuario);
+                    if (teste)
+                    {
+                        MessageBox.Show("Usuario alterado com sucesso!");
+                    }
+                } else {
 
                 //Enviar objeto para camada de controle para Salvar no arquivo
-               UsuarioController control = new UsuarioController();
                Boolean teste = control.InserirBD(usuario);
 
                 if (teste)
                 {
                     MessageBox.Show("Usuario cadastrado com sucesso!");
                 }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("ERRO AO CADASTRAR USUARIO: " + ex.Message);
             }
-
+     
         }
 
         private void frmCadUsuario_Load(object sender, EventArgs e)
         {
-
+            var usuariocast = this.Tag as Usuario;
+            if(usuariocast != null){
+                Usuario u = (Usuario)this.Tag;
+                txbEmail.Text = u.Email;
+                txbNome.Text = u.DisplayName;
+                txbNomeUsuario.Text = u.Username;
+                mtbSenha.Text = u.Senha;
+                btnCadastrar.Text = "Alterar";
+            }
         }
 
         public Usuario CarregarUsuarioDoForm()

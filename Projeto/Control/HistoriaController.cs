@@ -8,47 +8,47 @@ using Dao;
 
 namespace Control
 {
-    public class UsuarioController
+    public class HistoriaController
     {
-        public Dictionary<Int64, Usuario> ListarUsuarios()
+        public Dictionary<Int64, Historia> ListarHistorias()
         {
             try
             {
-                Dictionary<Int64, Usuario> mapaUsuarios = new Dictionary<Int64, Usuario>();
-                UsuarioDAO dao = new UsuarioDAO();
+                Dictionary<Int64, Historia> mapaHistorias = new Dictionary<Int64, Historia>();
+                HistoriaDAO dao = new HistoriaDAO();
 
-                foreach (Usuario o in dao.ListarTodos())
+                foreach (Historia o in dao.ListarTodos())
                 {
-                    mapaUsuarios.Add(o.Id, o);
+                    mapaHistorias.Add(o.id, o);
                 }
 
-                return mapaUsuarios;
+                return mapaHistorias;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-        public Boolean InserirBD(Usuario _objeto)
+        public Boolean AlterarBD(Historia _objeto)
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                HistoriaDAO dao = new HistoriaDAO();
+
+                return dao.AlterarBD(_objeto);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Boolean InserirBD(Historia _objeto)
+        {
+            try
+            {
+                HistoriaDAO dao = new HistoriaDAO();
 
                 return dao.InserirBD(_objeto);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-        public Boolean AlterarBD(Usuario _objeto)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-               
-                return dao.AlterarBD(_objeto);
             }
             catch (Exception ex)
             {
@@ -59,7 +59,7 @@ namespace Control
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                HistoriaDAO dao = new HistoriaDAO();
 
                 return dao.DeletarBD(_id);
             }

@@ -39,7 +39,7 @@
             this.documento = new System.Drawing.Printing.PrintDocument();
             this.janelaImpressao = new System.Windows.Forms.PrintDialog();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btndeletar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.gpbPessoas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -135,14 +135,15 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button1
+            // btndeletar
             // 
-            this.button1.Location = new System.Drawing.Point(99, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Deletar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btndeletar.Location = new System.Drawing.Point(99, 410);
+            this.btndeletar.Name = "btndeletar";
+            this.btndeletar.Size = new System.Drawing.Size(75, 23);
+            this.btndeletar.TabIndex = 10;
+            this.btndeletar.Text = "Deletar";
+            this.btndeletar.UseVisualStyleBackColor = true;
+            this.btndeletar.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -160,7 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 440);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btndeletar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.gpbPessoas);
@@ -188,7 +189,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gcolUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn gcolSenha;
         private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btndeletar;
         private System.Windows.Forms.Button button2;
     }
 }

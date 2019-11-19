@@ -8,32 +8,32 @@ using Dao;
 
 namespace Control
 {
-    public class UsuarioController
+    public class CapituloController
     {
-        public Dictionary<Int64, Usuario> ListarUsuarios()
+        public Dictionary<Int64, Capitulo> ListarCapituloDeHistoria(Historia h)
         {
             try
             {
-                Dictionary<Int64, Usuario> mapaUsuarios = new Dictionary<Int64, Usuario>();
-                UsuarioDAO dao = new UsuarioDAO();
+                Dictionary<Int64, Capitulo> mapaCapitulos = new Dictionary<Int64, Capitulo>();
+                CapituloDAO dao = new CapituloDAO();
 
-                foreach (Usuario o in dao.ListarTodos())
+                foreach (Capitulo o in dao.BuscarCapitulosPorHistoria(h.id))
                 {
-                    mapaUsuarios.Add(o.Id, o);
+                    mapaCapitulos.Add(o.id, o);
                 }
 
-                return mapaUsuarios;
+                return mapaCapitulos;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-        public Boolean InserirBD(Usuario _objeto)
+        public Boolean InserirBD(Capitulo _objeto)
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                CapituloDAO dao = new CapituloDAO();
 
                 return dao.InserirBD(_objeto);
             }
@@ -42,11 +42,11 @@ namespace Control
                 throw new Exception(ex.Message);
             }
         }
-        public Boolean AlterarBD(Usuario _objeto)
+        public Boolean AlterarBD(Capitulo _objeto)
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                CapituloDAO dao = new CapituloDAO();
                
                 return dao.AlterarBD(_objeto);
             }
@@ -59,7 +59,7 @@ namespace Control
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                CapituloDAO dao = new CapituloDAO();
 
                 return dao.DeletarBD(_id);
             }

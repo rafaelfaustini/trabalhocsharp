@@ -8,47 +8,34 @@ using Dao;
 
 namespace Control
 {
-    public class UsuarioController
+    public class FavoritoController
     {
-        public Dictionary<Int64, Usuario> ListarUsuarios()
+        public Dictionary<Int64, Favorito> ListarFavoritosDeUsuario(Usuario u)
         {
             try
             {
-                Dictionary<Int64, Usuario> mapaUsuarios = new Dictionary<Int64, Usuario>();
-                UsuarioDAO dao = new UsuarioDAO();
+                Dictionary<Int64, Favorito> mapaFavoritos = new Dictionary<Int64, Favorito>();
+                FavoritoDAO dao = new FavoritoDAO();
 
-                foreach (Usuario o in dao.ListarTodos())
+                foreach (Favorito o in dao.BuscarFavoritosPorUsuario(u.Id))
                 {
-                    mapaUsuarios.Add(o.Id, o);
+                    mapaFavoritos.Add(o.Usuario.Id, o);
                 }
 
-                return mapaUsuarios;
+                return mapaFavoritos;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
         }
-        public Boolean InserirBD(Usuario _objeto)
+        public Boolean InserirBD(Favorito _objeto)
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                FavoritoDAO dao = new FavoritoDAO();
 
                 return dao.InserirBD(_objeto);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-        public Boolean AlterarBD(Usuario _objeto)
-        {
-            try
-            {
-                UsuarioDAO dao = new UsuarioDAO();
-               
-                return dao.AlterarBD(_objeto);
             }
             catch (Exception ex)
             {
@@ -59,7 +46,7 @@ namespace Control
         {
             try
             {
-                UsuarioDAO dao = new UsuarioDAO();
+                FavoritoDAO dao = new FavoritoDAO();
 
                 return dao.DeletarBD(_id);
             }
