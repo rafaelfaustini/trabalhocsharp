@@ -44,6 +44,8 @@ namespace Dao
 
                     u.Favoritos = dao.BuscarFavoritosPorUsuario(u.Id);
                 }
+                BD.FecharConexao();
+
 
             }
             catch (Exception ex)
@@ -76,9 +78,7 @@ namespace Dao
 
                 data.Close();
                 BD.FecharConexao();
-                FavoritoDAO DaoFavorito = new FavoritoDAO();
 
-                u.Favoritos = DaoFavorito.BuscarFavoritosPorUsuario(u.Id);
             }
             catch (Exception ex)
             {

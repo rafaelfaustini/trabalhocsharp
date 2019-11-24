@@ -22,6 +22,7 @@ namespace Control
                     mapaUsuarios.Add(o.Id, o);
                 }
 
+
                 return mapaUsuarios;
             }
             catch (Exception ex)

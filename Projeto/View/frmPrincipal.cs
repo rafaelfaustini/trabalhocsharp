@@ -67,6 +67,7 @@ namespace View
                 tmHora.Enabled = true;
 
                 CarregarListaUsuarios();
+                CarregarListaHistorias();
 
             }
         }
@@ -117,7 +118,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO AO CARREGAR LISTA DE UsuarioS: " + ex.Message);
+                MessageBox.Show("ERRO AO CARREGAR LISTA DE Usuarios: " + ex.Message);
             }
         }
         private void CarregarListaHistorias()
@@ -131,7 +132,7 @@ namespace View
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO AO CARREGAR LISTA DE UsuarioS: " + ex.Message);
+                MessageBox.Show("ERRO AO CARREGAR LISTA DE Histórias: " + ex.Message);
             }
         }
 

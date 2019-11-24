@@ -15,17 +15,20 @@ namespace Dao
             List<Historia> listaHistorias = new List<Historia>();
             try
             {
-                String SQL = "SELECT * FROM Historia;";
+                String SQL = "SELECT id, autor, terminada, data, titulo, sinopse FROM Historia;";
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
+
+                List<int>ids = new List<int>();
+
+
 
                 while (data.Read())
                 {
                     Historia h = new Historia();
                     h.id = data.GetInt32(0);
-                    UsuarioDAO DaoUsuario = new UsuarioDAO();
-                    h.Autor = DaoUsuario.BuscarPorID(data.GetInt32(1));
-                    h.Terminada = data.GetBoolean(2);
+                    ids.Add(data.GetInt32(1));
+                    h.Terminada = Convert.ToBoolean(data.GetByte(2));
                     h.Data = data.GetDateTime(3);
                     h.Titulo = data.GetString(4);
                     h.Sinopse = data.GetString(5);
@@ -34,6 +37,15 @@ namespace Dao
 
                 data.Close();
                 BD.FecharConexao();
+
+                int i = 0;
+                foreach (Historia historia in listaHistorias) {
+                    UsuarioDAO DaoUsuario = new UsuarioDAO();
+                    Usuario autor = DaoUsuario.BuscarPorID(i);
+                    historia.Autor = autor;
+                    i+=1;
+                }
+
             }
             catch (Exception ex)
             {
@@ -46,7 +58,9 @@ namespace Dao
 
                 historia.Capitulos = dao.BuscarCapitulosPorHistoria(historia.id);
 
+
             }
+
 
             return listaHistorias;
         }

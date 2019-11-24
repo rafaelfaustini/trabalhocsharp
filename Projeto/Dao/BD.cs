@@ -26,9 +26,15 @@ namespace Dao
                     {
                         conexao.Open();
                     }
+                    else
+                    {
+                        conexao.Close();
+                    }
                 }
                 else
                 {
+
+
                     conexao = new SqlCeConnection();
 
                     conexao.ConnectionString = strConn;
