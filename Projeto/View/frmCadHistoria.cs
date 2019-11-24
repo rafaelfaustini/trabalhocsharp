@@ -27,10 +27,31 @@ namespace View
 
         private void frmCadHistoria_Load(object sender, EventArgs e)
         {
-            usuarios = (List<Usuario>)this.Tag;
-            comboBox1.DataSource = usuarios;
-            comboBox1.DisplayMember = "Username";
-            comboBox1.ValueMember = "Id";
+            var usuariocast = this.Tag as List<Usuario>;
+            if (usuariocast != null)
+            {
+                usuarios = (List<Usuario>)this.Tag;
+                comboBox1.DataSource = usuarios;
+                comboBox1.DisplayMember = "Username";
+                comboBox1.ValueMember = "Id";
+            }
+            else
+            {
+                UsuarioController control = new UsuarioController();
+                usuarios = control.ListarUsuarios().Values.ToList();
+                comboBox1.DataSource = usuarios;
+                comboBox1.DisplayMember = "Username";
+                comboBox1.ValueMember = "Id";
+
+                Historia h = (Historia)this.Tag;
+
+                comboBox1.SelectedItem = h.Autor;
+                txbNomeUsuario.Text = h.Titulo;
+                txbNome.Text = h.Sinopse;
+                button1.Text = "Alterar";
+            }
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

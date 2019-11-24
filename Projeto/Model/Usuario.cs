@@ -23,6 +23,11 @@ namespace Model
 
         public List<Favorito> Favoritos { get; set; }
 
+        public override string ToString() {
+            return Username;
+        }  
+
+
         #endregion
     }
 }

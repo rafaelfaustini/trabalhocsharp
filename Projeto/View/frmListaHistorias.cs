@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Model;
+using Control;
 
 namespace View
 {
@@ -30,12 +31,42 @@ namespace View
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            if (id != null)
+            {
+                HistoriaController control = new HistoriaController();
+                control.RemoverBD(id);
+                int indice = dataGridView1.CurrentCell.RowIndex;
+                dataGridView1.Rows.RemoveAt(indice);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                frmCadHistoria form = new frmCadHistoria();
+                DataGridViewCellCollection d = dataGridView1.SelectedRows[0].Cells;
+                Historia h = new Historia();
 
+                string id = d[0].Value.ToString();
+                h.id = int.Parse(id);
+                h.Autor = (Usuario)d[1].Value;
+                h.Titulo = d[2].Value.ToString();
+                h.Sinopse = d[3].Value.ToString();
+                String s = d[4].Value.ToString();
+                h.Terminada = Convert.ToBoolean(s);
+                h.Data = Convert.ToDateTime(d[5].Value.ToString());
+
+
+                form.Tag = h;
+                form.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
         }
 
         private void CarregarMapaHistorias()
