@@ -17,7 +17,6 @@ namespace View
 
         private Dictionary<Int64, Usuario> mapaUsuarios;
         private Dictionary<Int64, Historia> mapaHistorias;
-        private Dictionary<Int64, Capitulo> mapaCapitulos;
 
 
 
@@ -151,7 +150,7 @@ namespace View
 
         private void itbCadCapitulo_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmCadCapitulo());
+
         }
 
         private void itbCadFavorito_Click(object sender, EventArgs e)
@@ -193,7 +192,9 @@ namespace View
 
         private void listarToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmListaCapitulos());
+            frmListaCapitulos form = new frmListaCapitulos();
+            form.Tag = mapaHistorias.Values.ToList();
+            AbrirForm(form);
         }
 
         private void listarToolStripMenuItem3_Click(object sender, EventArgs e)
