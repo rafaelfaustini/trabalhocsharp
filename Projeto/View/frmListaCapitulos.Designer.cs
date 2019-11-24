@@ -125,6 +125,7 @@
             this.comboBox1.Size = new System.Drawing.Size(583, 21);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.Text = "Selecione a história";
+            this.comboBox1.TextUpdate += new System.EventHandler(this.comboBox1_TextUpdate);
             // 
             // frmListaCapitulos
             // 

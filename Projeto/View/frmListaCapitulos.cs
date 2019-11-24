@@ -31,6 +31,13 @@ namespace View
             this.Close();
         }
 
+        private void carregaCapitulos()
+        {
+            Historia selecionado = (Historia)comboBox1.SelectedItem;
+            CapituloController control = new CapituloController();
+            control.ListarCapituloDeHistoria(selecionado);
+        }
+
         private void frmListaCapitulos_Load(object sender, EventArgs e)
         {
 
@@ -41,12 +48,18 @@ namespace View
                 comboBox1.DataSource = historias;
                 comboBox1.DisplayMember = "Titulo";
                 comboBox1.ValueMember = "Id";
+                carregaCapitulos();
             }
             else
             {
 
             }
 
+        }
+
+        private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            carregaCapitulos();
         }
     }
 }
