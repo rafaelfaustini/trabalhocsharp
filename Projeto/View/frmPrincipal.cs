@@ -16,8 +16,8 @@ namespace View
     {
 
         private Dictionary<Int64, Usuario> mapaUsuarios;
-        private Dictionary<Int64, Usuario> mapaHistorias;
-        private Dictionary<Int64, Usuario> mapaCapitulos;
+        private Dictionary<Int64, Historia> mapaHistorias;
+        private Dictionary<Int64, Capitulo> mapaCapitulos;
 
 
 
@@ -120,6 +120,20 @@ namespace View
                 MessageBox.Show("ERRO AO CARREGAR LISTA DE UsuarioS: " + ex.Message);
             }
         }
+        private void CarregarListaHistorias()
+        {
+            try
+            {
+                HistoriaController control = new HistoriaController();
+
+                mapaHistorias = control.ListarHistorias();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO AO CARREGAR LISTA DE UsuarioS: " + ex.Message);
+            }
+        }
 
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -129,7 +143,9 @@ namespace View
 
         private void itbCadHistoria_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmCadHistoria());
+            frmCadHistoria form = new frmCadHistoria();
+            form.Tag = mapaUsuarios.Values.ToList();
+            AbrirForm(form);
         }
 
         private void itbCadCapitulo_Click(object sender, EventArgs e)
@@ -160,7 +176,18 @@ namespace View
 
         private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmListaHistorias());
+            frmListaHistorias form = new frmListaHistorias();
+
+            try
+            {
+                form.Tag = mapaHistorias;
+
+            }
+            catch
+            {
+
+            }
+            AbrirForm(form);
         }
 
         private void listarToolStripMenuItem2_Click(object sender, EventArgs e)

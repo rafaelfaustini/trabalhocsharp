@@ -114,9 +114,12 @@ namespace Dao
 
                     CapituloDAO daoCapitulo = new CapituloDAO();
 
-                    foreach (Capitulo end in _objeto.Capitulos)
+                    if (_objeto.Capitulos != null)
                     {
-                        daoCapitulo.InserirBD(end);
+                        foreach (Capitulo end in _objeto.Capitulos)
+                        {
+                            daoCapitulo.InserirBD(end);
+                        }
                     }
 
                     return true;

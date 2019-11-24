@@ -47,6 +47,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -124,6 +125,7 @@
             this.Controls.Add(this.button1);
             this.Name = "frmCadHistoria";
             this.Text = "Cadastro de História";
+            this.Load += new System.EventHandler(this.frmCadHistoria_Load);
             this.gpbDadosComp.ResumeLayout(false);
             this.gpbDadosComp.PerformLayout();
             this.ResumeLayout(false);
