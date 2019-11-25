@@ -66,7 +66,10 @@ namespace View
                 if (historiacast != null)
                 {
                     var h = (Historia)this.Tag;
-                    
+                    h.Autor = (Usuario)comboBox1.SelectedItem;
+                    h.Titulo = txbNomeUsuario.Text;
+                    h.Data = DateTime.Today;
+                    h.Sinopse = txbNome.Text;
                     Boolean teste = control.AlterarBD(h);
                     if (teste)
                     {

@@ -33,9 +33,10 @@ namespace View
         }
         private void carregaLista()
         {
+            dataGridView1.Rows.Clear();
             foreach (Capitulo c in capitulos)
             {
-                dataGridView1.Rows.Add(c.id, c.historia, c.Titulo, c.Texto, c.Observacoes);
+                dataGridView1.Rows.Add(c.id, c.Titulo, c.Texto, c.Observacoes);
             }
         }
         private void carregaCapitulos()
@@ -73,6 +74,31 @@ namespace View
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             carregaCapitulos();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmCadCapitulo form = new frmCadCapitulo();
+                DataGridViewCellCollection d = dataGridView1.SelectedRows[0].Cells;
+                Capitulo c = new Capitulo();
+
+                string id = d[0].Value.ToString();
+                c.id = int.Parse(id);
+                c.historia = (Historia)comboBox1.SelectedItem;
+                c.Titulo = d[1].Value.ToString();
+                c.Texto = d[2].Value.ToString();
+                c.Observacoes = d[3].Value.ToString();
+          
+                form.Tag = c;
+                form.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+
+            }
         }
     }
 }

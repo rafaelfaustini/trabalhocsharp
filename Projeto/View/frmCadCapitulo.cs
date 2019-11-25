@@ -66,7 +66,10 @@ namespace View
                 {
 
                     var c = (Capitulo)this.Tag;
-
+                    c.historia = (Historia)comboBox1.SelectedItem;
+                    c.Titulo = txbNomeUsuario.Text;
+                    c.Texto = txbNome.Text;
+                    c.Observacoes = textBox1.Text;
                     Boolean teste = control.AlterarBD(c);
                     if (teste)
                     {

@@ -57,10 +57,9 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE Capitulo SET historia = {0}, observacoes = '{1}', ordem = {2}, texto = '{3}', titulo = '{4}' WHERE id = {5};",
-                    _objeto.historia,
+                String SQL = String.Format("UPDATE Capitulo SET historia = {0}, observacoes = '{1}', texto = '{2}', titulo = '{3}' WHERE id = {4};",
+                    _objeto.historia.id,
                     _objeto.Observacoes,
-                    _objeto.ordem,
                     _objeto.Texto,
                     _objeto.Titulo,
                     _objeto.id);

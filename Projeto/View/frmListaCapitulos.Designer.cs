@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Observações = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Título = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ordem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Título = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Texto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Observações = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,46 +47,17 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.Observações,
-            this.Texto,
             this.Título,
-            this.Ordem});
+            this.Texto,
+            this.Observações});
             this.dataGridView1.Location = new System.Drawing.Point(12, 43);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(583, 343);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Observações
-            // 
-            this.Observações.HeaderText = "Observações";
-            this.Observações.Name = "Observações";
-            this.Observações.ReadOnly = true;
-            // 
-            // Texto
-            // 
-            this.Texto.HeaderText = "Texto";
-            this.Texto.Name = "Texto";
-            this.Texto.ReadOnly = true;
-            // 
-            // Título
-            // 
-            this.Título.HeaderText = "Título";
-            this.Título.Name = "Título";
-            this.Título.ReadOnly = true;
-            // 
-            // Ordem
-            // 
-            this.Ordem.HeaderText = "Ordem";
-            this.Ordem.Name = "Ordem";
-            this.Ordem.ReadOnly = true;
             // 
             // button1
             // 
@@ -107,6 +77,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -127,6 +98,30 @@
             this.comboBox1.Text = "Selecione a história";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             this.comboBox1.TextUpdate += new System.EventHandler(this.comboBox1_TextUpdate);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Título
+            // 
+            this.Título.HeaderText = "Título";
+            this.Título.Name = "Título";
+            this.Título.ReadOnly = true;
+            // 
+            // Texto
+            // 
+            this.Texto.HeaderText = "Texto";
+            this.Texto.Name = "Texto";
+            this.Texto.ReadOnly = true;
+            // 
+            // Observações
+            // 
+            this.Observações.HeaderText = "Observações";
+            this.Observações.Name = "Observações";
+            this.Observações.ReadOnly = true;
             // 
             // frmListaCapitulos
             // 
@@ -154,9 +149,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Observações;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Texto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Título;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ordem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Texto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Observações;
     }
 }
