@@ -15,6 +15,7 @@ namespace View
     public partial class frmListaCapitulos : Form
     {
         List<Historia> historias = new List<Historia>();
+        List<Capitulo> capitulos = null;
 
         public frmListaCapitulos()
         {
@@ -30,12 +31,19 @@ namespace View
         {
             this.Close();
         }
-
+        private void carregaLista()
+        {
+            foreach (Capitulo c in capitulos)
+            {
+                dataGridView1.Rows.Add(c.id, c.historia, c.Titulo, c.Texto, c.Observacoes);
+            }
+        }
         private void carregaCapitulos()
         {
             Historia selecionado = (Historia)comboBox1.SelectedItem;
             CapituloController control = new CapituloController();
-            control.ListarCapituloDeHistoria(selecionado);
+            capitulos = control.ListarCapituloDeHistoria(selecionado).Values.ToList();
+            carregaLista();
         }
 
         private void frmListaCapitulos_Load(object sender, EventArgs e)
@@ -58,6 +66,11 @@ namespace View
         }
 
         private void comboBox1_TextUpdate(object sender, EventArgs e)
+        {
+            carregaCapitulos();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             carregaCapitulos();
         }

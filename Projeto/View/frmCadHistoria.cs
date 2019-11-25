@@ -27,7 +27,7 @@ namespace View
 
         private void frmCadHistoria_Load(object sender, EventArgs e)
         {
-            var usuariocast = this.Tag as List<Usuario>;
+            var usuariocast = this.Tag as List<Historia>;
             if (usuariocast != null)
             {
                 usuarios = (List<Usuario>)this.Tag;
@@ -87,13 +87,13 @@ namespace View
 
                     if (teste)
                     {
-                        MessageBox.Show("Usuario cadastrado com sucesso!");
+                        MessageBox.Show("História cadastrada com sucesso!");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERRO AO CADASTRAR USUARIO: " + ex.Message);
+                MessageBox.Show("ERRO AO CADASTRAR HISTORIA: " + ex.Message);
             }
      
         }

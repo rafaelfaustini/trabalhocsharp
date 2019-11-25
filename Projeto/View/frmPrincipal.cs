@@ -150,7 +150,9 @@ namespace View
 
         private void itbCadCapitulo_Click(object sender, EventArgs e)
         {
-
+            frmCadCapitulo form = new frmCadCapitulo();
+            form.Tag = mapaHistorias.Values.ToList();
+            AbrirForm(form);
         }
 
         private void itbCadFavorito_Click(object sender, EventArgs e)

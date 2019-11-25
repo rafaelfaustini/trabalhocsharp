@@ -16,8 +16,9 @@ namespace Control
             {
                 Dictionary<Int64, Capitulo> mapaCapitulos = new Dictionary<Int64, Capitulo>();
                 CapituloDAO dao = new CapituloDAO();
+                List<Capitulo> lista = dao.BuscarCapitulosPorHistoria(h);
 
-                foreach (Capitulo o in dao.BuscarCapitulosPorHistoria(h.id))
+                foreach (Capitulo o in lista)
                 {
                     mapaCapitulos.Add(o.id, o);
                 }

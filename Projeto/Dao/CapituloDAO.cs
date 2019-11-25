@@ -10,27 +10,29 @@ namespace Dao
 {
     public class CapituloDAO
     {
-        public List<Capitulo> BuscarCapitulosPorHistoria(Int32 _id)
+        public List<Capitulo> BuscarCapitulosPorHistoria(Historia h)
         {
             List<Capitulo> listaCapitulos = new List<Capitulo>();
             try
             {
-                String SQL = "SELECT observacoes,ordem,texto,titulo FROM Capitulo where historia="+_id+";";
+                String SQL = "SELECT id,observacoes,ordem,texto,titulo FROM Capitulo where historia="+h.id+";";
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
+
+
 
                 while (data.Read())
                 {
                     Capitulo c = new Capitulo();
 
-                    c.id = _id;
-                    c.Observacoes = data.GetString(0);
-                    c.ordem = data.GetInt32(1);
-                    c.Texto = data.GetString(2);
-                    c.Titulo = data.GetString(3);
+                    c.id = data.GetInt32(0);
+                    c.historia = h;
+                    c.Observacoes = data.GetString(1);
+                    c.ordem = data.GetInt32(2);
+                    c.Texto = data.GetString(3);
+                    c.Titulo = data.GetString(4);
 
-                    HistoriaDAO DaoHistoria = new HistoriaDAO();
-                    c.historia = DaoHistoria.BuscarPorID(_id);
+
 
                     listaCapitulos.Add(c);
                 }
@@ -38,11 +40,14 @@ namespace Dao
                 data.Close();
                 BD.FecharConexao();
 
+
+
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
 
             return listaCapitulos;
         }

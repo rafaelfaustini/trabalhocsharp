@@ -56,7 +56,7 @@ namespace Dao
             {
                 CapituloDAO dao = new CapituloDAO();
 
-                historia.Capitulos = dao.BuscarCapitulosPorHistoria(historia.id);
+                historia.Capitulos = dao.BuscarCapitulosPorHistoria(historia);
 
 
             }
@@ -94,7 +94,7 @@ namespace Dao
 
                     CapituloDAO dao = new CapituloDAO();
 
-                    h.Capitulos = dao.BuscarCapitulosPorHistoria(h.id);
+                    h.Capitulos = dao.BuscarCapitulosPorHistoria(h);
 
             }
             catch (Exception ex)
@@ -225,7 +225,7 @@ namespace Dao
                 {
                     CapituloDAO dao = new CapituloDAO();
 
-                    historia.Capitulos = dao.BuscarCapitulosPorHistoria(historia.id);
+                    historia.Capitulos = dao.BuscarCapitulosPorHistoria(historia);
 
                 }
 

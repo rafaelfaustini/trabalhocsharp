@@ -79,6 +79,7 @@ namespace Dao
                 data.Close();
                 BD.FecharConexao();
 
+
             }
             catch (Exception ex)
             {

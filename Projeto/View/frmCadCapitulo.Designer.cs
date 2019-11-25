@@ -30,12 +30,12 @@
         {
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.gpbDadosComp = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.txbNomeUsuario = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.gpbDadosComp.SuspendLayout();
@@ -64,6 +64,23 @@
             this.gpbDadosComp.TabIndex = 7;
             this.gpbDadosComp.TabStop = false;
             this.gpbDadosComp.Text = "Dados de Capítulo";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(107, 280);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(371, 128);
+            this.textBox1.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 283);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Observações:";
             // 
             // txbNome
             // 
@@ -98,23 +115,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Título";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Observações:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(107, 280);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(371, 128);
-            this.textBox1.TabIndex = 12;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(441, 538);
@@ -133,6 +133,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCadCapitulo
             // 
@@ -145,6 +146,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "frmCadCapitulo";
             this.Text = "Cadastro de Capítulo";
+            this.Load += new System.EventHandler(this.frmCadCapitulo_Load);
             this.gpbDadosComp.ResumeLayout(false);
             this.gpbDadosComp.PerformLayout();
             this.ResumeLayout(false);
