@@ -42,7 +42,9 @@ namespace View
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmCadComentario());
+            frmCadComentario form = new frmCadComentario();
+            form.Tag = mapaHistorias.Values.ToList();
+            AbrirForm(form);
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -201,7 +203,9 @@ namespace View
 
         private void listarToolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            AbrirForm(new frmListaComentarios());
+            frmListaComentarios form = new frmListaComentarios();
+            form.Tag = mapaHistorias.Values.ToList();
+            AbrirForm(form);
         }
 
         private void adicionarToolStripMenuItem1_Click(object sender, EventArgs e)

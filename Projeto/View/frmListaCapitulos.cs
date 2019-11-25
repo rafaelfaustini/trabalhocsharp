@@ -100,5 +100,17 @@ namespace View
 
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            if (id != null)
+            {
+                CapituloController control = new CapituloController();
+                control.RemoverBD(id);
+                int indice = dataGridView1.CurrentCell.RowIndex;
+                dataGridView1.Rows.RemoveAt(indice);
+            }
+        }
     }
 }

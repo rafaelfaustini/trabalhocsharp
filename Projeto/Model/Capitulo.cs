@@ -22,6 +22,11 @@ namespace Model
         public String Titulo { get; set; }
 
         public List<Comentario> Comentarios { get; set; }
+
+        public override string ToString()
+        {
+            return Titulo;
+        }  
     }
     #endregion
 }

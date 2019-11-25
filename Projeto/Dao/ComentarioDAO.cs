@@ -12,6 +12,7 @@ namespace Dao
         public List<Comentario> ListarPorCapitulo(Int32 _id)
         {
             List<Comentario> listaComentarios = new List<Comentario>();
+            List<int> listaids = new List<int>();
             try
             {
                 String SQL = "SELECT id,texto,criado,id_usuario FROM Comentario where id_capitulo = "+_id+";";
@@ -26,9 +27,7 @@ namespace Dao
                     c.Texto = data.GetString(1);
                     c.criado = data.GetDateTime(2);
 
-                    UsuarioDAO DaoUsuario = new UsuarioDAO();
-
-                    c.Usuario = DaoUsuario.BuscarPorID(data.GetInt32(3));
+                    listaids.Add(data.GetInt32(3));
 
 
                     listaComentarios.Add(c);
@@ -36,6 +35,13 @@ namespace Dao
 
                 data.Close();
                 BD.FecharConexao();
+
+                int i=0;
+                foreach (Comentario comentario in listaComentarios){
+                 UsuarioDAO DaoUsuario = new UsuarioDAO();
+                 comentario.Usuario = DaoUsuario.BuscarPorID(listaids[i]);
+                    i+=1;
+                }
 
 
             }

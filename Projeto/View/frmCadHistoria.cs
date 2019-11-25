@@ -27,7 +27,7 @@ namespace View
 
         private void frmCadHistoria_Load(object sender, EventArgs e)
         {
-            var usuariocast = this.Tag as List<Historia>;
+            var usuariocast = this.Tag as List<Usuario>;
             if (usuariocast != null)
             {
                 usuarios = (List<Usuario>)this.Tag;

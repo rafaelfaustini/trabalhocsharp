@@ -43,9 +43,6 @@
             this.comentárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDicionarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.favoritoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barraTarefa = new System.Windows.Forms.ToolStrip();
@@ -79,7 +76,6 @@
             this.históriaToolStripMenuItem,
             this.capítuloToolStripMenuItem,
             this.comentárioToolStripMenuItem,
-            this.favoritoToolStripMenuItem,
             this.toolStripMenuItem2,
             this.sairToolStripMenuItem});
             this.itmArquivo.Name = "itmArquivo";
@@ -101,14 +97,14 @@
             // adicionarToolStripMenuItem
             // 
             this.adicionarToolStripMenuItem.Name = "adicionarToolStripMenuItem";
-            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.adicionarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.adicionarToolStripMenuItem.Text = "Adicionar";
             this.adicionarToolStripMenuItem.Click += new System.EventHandler(this.adicionarToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click_1);
             // 
@@ -180,28 +176,6 @@
             this.listarToolStripMenuItem3.Size = new System.Drawing.Size(125, 22);
             this.listarToolStripMenuItem3.Text = "Listar";
             this.listarToolStripMenuItem3.Click += new System.EventHandler(this.listarToolStripMenuItem3_Click);
-            // 
-            // favoritoToolStripMenuItem
-            // 
-            this.favoritoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarToolStripMenuItem4,
-            this.listarToolStripMenuItem4});
-            this.favoritoToolStripMenuItem.Name = "favoritoToolStripMenuItem";
-            this.favoritoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.favoritoToolStripMenuItem.Text = "Favorito";
-            // 
-            // adicionarToolStripMenuItem4
-            // 
-            this.adicionarToolStripMenuItem4.Name = "adicionarToolStripMenuItem4";
-            this.adicionarToolStripMenuItem4.Size = new System.Drawing.Size(125, 22);
-            this.adicionarToolStripMenuItem4.Text = "Adicionar";
-            this.adicionarToolStripMenuItem4.Click += new System.EventHandler(this.adicionarToolStripMenuItem4_Click);
-            // 
-            // listarToolStripMenuItem4
-            // 
-            this.listarToolStripMenuItem4.Name = "listarToolStripMenuItem4";
-            this.listarToolStripMenuItem4.Size = new System.Drawing.Size(125, 22);
-            this.listarToolStripMenuItem4.Text = "Listar";
             // 
             // toolStripMenuItem2
             // 
@@ -344,10 +318,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem comentárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aDicionarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem favoritoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem adicionarToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem4;
     }
 }
 
